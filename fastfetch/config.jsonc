@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "C:/Users/uriel/.config/fastfetch/ascii.txt",
+    "color": {
+      "1": "#0D47A1",
+      "2": "#1565C0",
+      "3": "#1976D2",
+      "4": "#1E88E5",
+      "5": "#2196F3",
+      "6": "#00BCD4",
+      "7": "#26C6DA",
+      "8": "#4DD0E1",
+      "9": "#B2EBF2"
+    },
+    "padding": {
+      "top": 1,
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "#4FC3F7",
+        "at": "#ffffff",
+        "host": "#81D4FA"
+      }
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "#42A5F5"
+    },
+    {
+      "type": "cpu",
+      "key": "",
+      "keyColor": "#1E88E5"
+    },
+    {
+      "type": "board",
+      "key": "󰚗",
+      "keyColor": "#1976D2"
+    },
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "#00BCD4",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "",
+      "keyColor": "#26C6DA"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
