@@ -60,3 +60,7 @@ Ensure your Windows Terminal is using a **Nerd Font** (like `Cascadia Code NF`) 
 - **Theme:** Edit `hunk.omp.json` to change the prompt style.
 - **Fastfetch:** Edit `fastfetch/config.jsonc` to change the system info display.
 - **Profile:** Edit `WindowsPowerShell/Microsoft.PowerShell_profile.ps1` for aliases and startup logic.
+
+## Portability Note
+
+All configurations have been updated to use the `$HOME` variable (which points to your User Profile directory) instead of hardcoded paths. This ensures the setup works seamlessly across different machines regardless of the username.
