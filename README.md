@@ -1,38 +1,62 @@
 # My Personalized Windows Terminal Config
 
-This repository contains my personal configuration for Windows Terminal, PowerShell, and Fastfetch.
+This repository contains my personal configuration for Windows Terminal, PowerShell, Oh My Posh, and Fastfetch.
 
 ## Contents
 
-- **fastfetch/**: Contains the configuration for `fastfetch`, including a custom ASCII art.
-- **WindowsPowerShell/**: Contains my PowerShell profile, scripts, and modules.
+- **fastfetch/**: Configuration for `fastfetch`.
+- **WindowsPowerShell/**: PowerShell profile and scripts.
+- **hunk.omp.json**: Oh My Posh theme configuration.
 
 ## Installation
 
-### Prerequisites
+### 1. Install Prerequisites
 
-- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- PowerShell 7 (Recommended) or Windows PowerShell 5.1
+Install the required tools using [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/):
 
-### Steps
+```powershell
+# Install Fastfetch
+winget install fastfetch
 
-1.  **Fastfetch Config:**
-    Copy the `fastfetch` folder to your user's `.config` directory:
-    ```powershell
-    Copy-Item -Recurse -Force .\fastfetch $HOME\.config\
-    ```
+# Install Oh My Posh
+winget install JanDeDobbeleer.OhMyPosh -s winget
 
-2.  **PowerShell Profile:**
-    Copy the `WindowsPowerShell` folder to your user's Documents directory:
-    ```powershell
-    Copy-Item -Recurse -Force .\WindowsPowerShell $HOME\Documents\
-    ```
-    *Note: If you are using PowerShell 7, you might need to rename `WindowsPowerShell` to `PowerShell`.*
+# Install a Nerd Font (e.g., Cascadia Code NF) for the icons to work
+winget install Microsoft.CascadiaCode
+```
 
-3.  **Reload:**
-    Restart your terminal to apply changes.
+### 2. Copy Configuration Files
+
+Clone this repo and run these commands to move the files to their correct locations:
+
+```powershell
+# Create config directory if it doesn't exist
+New-Item -ItemType Directory -Force -Path "$HOME\.config"
+
+# Copy Fastfetch config
+Copy-Item -Recurse -Force .\fastfetch "$HOME\.config\"
+
+# Copy PowerShell profile
+Copy-Item -Recurse -Force .\WindowsPowerShell "$HOME\Documents\"
+
+# Copy Oh My Posh theme
+Copy-Item -Force .\hunk.omp.json "$HOME\"
+```
+
+### 3. Update PowerShell Modules
+
+The profile uses `PSReadLine`. Ensure it is up to date:
+
+```powershell
+Install-Module -Name PSReadLine -AllowPrerelease -Force
+```
+
+### 4. Set Up Terminal Font
+
+Ensure your Windows Terminal is using a **Nerd Font** (like `Cascadia Code NF`) to display the icons correctly.
 
 ## Customization
 
-- Edit `WindowsPowerShell/Microsoft.PowerShell_profile.ps1` to change aliases or startup commands.
-- Edit `fastfetch/config.jsonc` to tweak the system information display.
+- **Theme:** Edit `hunk.omp.json` to change the prompt style.
+- **Fastfetch:** Edit `fastfetch/config.jsonc` to change the system info display.
+- **Profile:** Edit `WindowsPowerShell/Microsoft.PowerShell_profile.ps1` for aliases and startup logic.

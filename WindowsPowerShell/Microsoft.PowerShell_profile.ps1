@@ -16,7 +16,7 @@ Clear-Host
 
 # Force Fastfetch to use YOUR config every time (bypass path confusion)
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
-    fastfetch -c "C:/Users/uriel/.config/fastfetch/config.jsonc"
+    fastfetch -c "$HOME\.config\fastfetch\config.jsonc"
 }
 
 # This changes the 'Command' color (the text you type) from Yellow to White
