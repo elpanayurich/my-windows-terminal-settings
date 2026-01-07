@@ -23,6 +23,10 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 # Install a Nerd Font (e.g., Cascadia Code NF) for the icons to work
 winget install Microsoft.CascadiaCode
+
+# Optional: Install JetBrainsMono Nerd Font (used in the included terminal settings)
+# You can find it at https://www.nerdfonts.com/font-downloads or install via winget:
+winget install "JetBrainsMono Nerd Font"
 ```
 
 ### 2. Copy Configuration Files
@@ -42,6 +46,19 @@ Copy-Item -Recurse -Force .\WindowsPowerShell "$HOME\Documents\"
 # Copy Oh My Posh theme
 Copy-Item -Force .\hunk.omp.json "$HOME\"
 ```
+
+### 3. Import Windows Terminal Settings
+
+To get the exact same visual look (colors, transparency, fonts):
+
+1.  Open **Windows Terminal**.
+2.  Press `Ctrl` + `,` to open Settings.
+3.  Click **"Open JSON file"** at the bottom left.
+4.  Copy the content of `terminal-settings.json` from this repo.
+5.  Paste it into your local `settings.json`, replacing the `schemes` and `profiles` sections (or the whole file if you want an exact clone).
+    *   *Note: Ensure the "font" matches what you installed (e.g., JetBrainsMono Nerd Font).*
+
+### 4. Update PowerShell Modules
 
 ### 3. Update PowerShell Modules
 
