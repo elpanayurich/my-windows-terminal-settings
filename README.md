@@ -51,13 +51,14 @@ Copy-Item -Force .\hunk.omp.json "$HOME\"
 
 ### 3. Import Windows Terminal Settings
 
-To get the exact same visual look (colors, transparency, fonts):
+To get the exact same visual look (colors, fonts):
 
 1.  Open **Windows Terminal**.
 2.  Press `Ctrl` + `,` to open Settings.
 3.  Click **"Open JSON file"** at the bottom left.
 4.  Copy the content of `terminal-settings.json` from this repo.
-5.  Paste it into your local `settings.json`, replacing the `schemes` and `profiles` sections (or the whole file if you want an exact clone).
+5.  I have disabled transparency in my Windows 11, but you can play with it to test if you like it in the terminal settings.
+6.  Paste it into your local `settings.json`, replacing the `schemes` and `profiles` sections (or the whole file if you want an exact clone).
     *   *Note: Ensure the "font" matches what you installed (e.g., JetBrainsMono Nerd Font).*
 
 ### 4. Update PowerShell Modules
@@ -72,7 +73,7 @@ Install-Module -Name PSReadLine -AllowPrerelease -Force
 
 ### 4. Set Up Terminal Font
 
-Ensure your Windows Terminal is using a **Nerd Font** (like `Cascadia Code NF`) to display the icons correctly.
+Ensure your Windows Terminal is using a **Nerd Font** (like `Cascadia Code NF`) to display the icons correctly. In my case I use JetBrainsMono Nerd Font.
 
 ## Customization
 
