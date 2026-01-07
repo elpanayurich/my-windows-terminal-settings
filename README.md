@@ -1,5 +1,7 @@
 # My Personalized Windows Terminal Config
 
+![My Epic Terminal Setup](epic-terminal.png)
+
 This repository contains my personal configuration for Windows Terminal, PowerShell, Oh My Posh, and Fastfetch.
 
 ## Contents
